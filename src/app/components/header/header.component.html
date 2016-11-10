@@ -1,0 +1,80 @@
+<header>
+  <div class="top_block" *ngIf="isActiveRoute() !== '/'">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-7 col-sm-7 col-xs-6 pull-left">
+          <div class="contant-top-block">
+            <ul class="contact-top">
+              <li><i class="icon-basic-home"></i> 455 Martinson, Los Angeles</li>
+              <li><i class="icon-basic-smartphone"></i> 8 (043) 567 - 89 - 30</li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-5 col-sm-5 col-xs-6 pull-right">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page_head"
+       [ngClass]="{'transparent-vers': isActiveRoute() === '/', 'classic-vers': isActiveRoute() !== '/'}">
+    <div id="nav-container" class="nav-container" style="height: auto;">
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 pull-left">
+              <div class="logo">
+                <a href="/">
+                  <img class="pull-left" src="assets/images/logo.png" alt="Logo"><span
+                  class="pull-left logo-text">Genius X</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6 pull-right">
+              <div class="menu menu-wrapper transparent-vers">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-collapse"></button>
+                <div class="navbar-collapse collapse">
+                  <i class="menu-main-menu-container"></i>
+                  <ul>
+                    <li [ngClass]="{'current-menu-item': isActiveRoute() === '/'}"><a href="/">SMARTHOME</a>
+                    </li>
+                    <li [ngClass]="{'current-menu-item': isActiveRoute().indexOf('/systems') > -1}"><a [routerLink]="['/systems']">SYSTEMS</a>
+                      <ul class="sub-menu">
+                        <li><a href="/systems#audio-video">Audio & Video</a></li>
+                        <li><a href="/systems#SECURITY-SURVEILLANCE">Security
+                          cameras</a></li>
+                        <li><a href="/systems#home-monitoring">Home monitoring</a></li>
+                        <li><a href="/systems#commercial-systems">Commercial systems</a>
+                        </li>
+                        <li><a href="/systems#automatic-shades">Automatic shades &
+                          drapes</a></li>
+                        <li><a href="/systems#cellular-amplification">Cellular
+                          amplification</a></li>
+                      </ul>
+                    </li>
+                    <li [ngClass]="{'current-menu-item': isActiveRoute().indexOf('/services') > -1}"><a href="/services">Services</a>
+                      <ul class="sub-menu">
+                        <li><a href="/services#contactform1">Free on site
+                          consultation</a></li>
+                        <li><a href="/services#programming">Programming</a></li>
+                        <li><a href="/services#warranty">Warranty</a></li>
+                      </ul>
+                    </li>
+                    <li [ngClass]="{'current-menu-item': isActiveRoute().indexOf('/networking-wifi') > -1}"><a href="/networking-wifi"><i class="icon-basic-rss"></i></a>
+                    <li [ngClass]="{'current-menu-item': isActiveRoute().indexOf('/support') > -1}"><a href="/support">Support</a></li>
+                    <li [ngClass]="{'current-menu-item': isActiveRoute().indexOf('/quote') > -1}"><a href="/quote">Get a quote</a></li>
+                    <li class="wpmenucartli wpmenucart-display-standard" id="wpmenucartli"></li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
